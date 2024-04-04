@@ -10,12 +10,13 @@ executeButton.addEventListener("click", function(){
 	restyle();
 });
 
-function generate(question){
+function generate(){
 	var randomanswer = answers[Math.floor(Math.random() * answers.length)];
-	document.getElementById("answer").innerText = "The answer is: " + randomanswer
+	var question = questionElement.value;
+	document.getElementById("answer").innerText = "The answer to '" + question + "' is: " + randomanswer;
 };
 
-function restyle(answer) {
+function restyle() {
 	var randomRed = Math.random() * 225;
 	var randomGreen = Math.random() * 225;
 	var randomBlue = Math.random() * 225;
